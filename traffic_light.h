@@ -11,6 +11,8 @@ class TrafficLight: public QWidget{
 
 public:
   TrafficLight(QWidget * parent = nullptr);
+public slots:
+  void light_update();
 
 private:
   QRadioButton * redlight;
