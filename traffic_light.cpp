@@ -29,5 +29,15 @@ TrafficLight::TrafficLight(QWidget * parent): QWidget(parent) {
     setLayout(layout);
 }
 
+void TrafficLight::light_update() {
 
-// TO DO: build the light_update() slot function here
+  if (redlight->isChecked()) {
+    greenlight->toggle();
+  }
+  else if (greenlight->isChecked()) {
+    yellowlight->toggle();
+  }
+  else {
+    redlight->toggle();
+  }
+}
